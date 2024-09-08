@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts/Inter.ttf);
+    src: url(fonts/Inter-Italic.ttf);
+
+    
+}
+
+        body {
+          text-align: center;
+            font-family: 'Inter';
+            margin: auto;
+            padding: 0;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+        body.loaded{
+            opacity: 1;
+        }
+
+     
+        #sidebar {
+            font-weight: bolder;
+            font-style: normal;
+            font-family: 'Inter';
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgb(70,119,80);
+            padding-top: 1px;
+            box-shadow: 2px 0 5px rgb(70,119,80);
+        
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 10px;
+            text-align: center;
+        }
+
+        a.sidebar {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+   a.sidebar:hover{
+    background-color: white;
+    color:rgb(42,63,63) ;
+    transition: background-color 0.3s; 
+    border-radius: 20px;
+   }
+        #content {
+            font-weight: bolder;
+            margin-left:230px
+        }
+        #title{
+            color: white   ;
+            text-align: center;
+        }
+        a.logout{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(42,63,63);
+       color: white;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        a.logout:hover{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: rgb(42,63,63);
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+        a.User{
+            text-align: right;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgb(42,63,63);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            width: 140px;
+            transition: background-color 0.3s;
+        }
+        a.User:hover{
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: white;
+            color: rgb(42,63,63);
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    #brain{
+        cursor: pointer;
+        padding: 0px;
+    }
+    p.card{
+    text-align: center;
+      background-color: white;
+      border: 2px solid black;
+      height:fit-content;
+      width: fit-content;
+      padding: 30px;
+      border-radius: 12px;
+    }
+    p.card .highlight{
+        text-align: center;
+         
+          font-size: 10px;
+        }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; 
+    }
+
+    .greeting {
+        margin:auto;
+        text-align: center;
+        font-size: 24px;
+    color: black;}
+    a.sec{
+        text-decoration: black;
+        color: black;
+        font-size: large;
+    }
+/* Container Styling */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse; 
+    border: 1px solid #000;
+}
+
+/* Table Header Styling */
+.table thead th {
+    background-color: white ;
+    color: black;
+    padding: 10px;
+    text-align: center  ;
+    border: 1px solid #000;
+}
+
+/* Table Body Row Styling */
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Zebra stripe for odd rows */
+    
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White for even rows */
+}
+
+/* Table Cell Styling */
+.table tbody td {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Add Hover Effect */
+.table tbody tr:hover {
+    background-color: #e9ecef; /* Light gray on hover */
+}
+
+button.export{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(42,63,63);
+    color: white;
+    border: rgb(42,63,63);
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+button.export:hover{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(42,63,63);
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border-color: rgb(42,63,63);
+}
+     
