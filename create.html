@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Students to Section</title>
+</head>
+<body>
+    <h2>Add Students to Section</h2>
+    <form action="create.php" method="POST">
+        <label for="table_name">Section Name:</label>
+        <input type="text" id="table_name" name="table_name" required><br><br>
+
+        <label for="rows">Number of Students:</label>
+        <input type="number" id="rows" name="rows" required><br><br>
+
+        <div id="rows-input"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Dynamically add input fields for rows (students)
+        document.getElementById('rows').addEventListener('input', function() {
+            const rowsInput = document.getElementById('rows-input');
+            rowsInput.innerHTML = ''; // Clear previous inputs
+            let rowsCount = parseInt(this.value);
+
+            for (let i = 1; i <= rowsCount; i++) {
+                rowsInput.innerHTML += `<h3>Student ${i}</h3>
+                                        <label>First Name:</label>
+                                        <input type="text" name="firstname_${i}" required><br>
+                                        <label>Middle Name:</label>
+                                        <input type="text" name="middlename_${i}" required><br>
+                                        <label>Last Name:</label>
+                                        <input type="text" name="lastname_${i}" required><br>
+                                        <label>Grade Year:</label>
+                                        <input type="number" name="gradeyear_${i}" required><br>
+                                        <label>Age:</label>
+                                        <input type="number" name="age_${i}" required><br>
+                                        <label>Email:</label>
+                                        <input type="email" name="email_${i}" required><br>
+                                        <label>Address:</label>
+                                        <input type="text" name="address_${i}" required><br>
+                                        <label>Gender:</label>
+                                        <select name="gender_${i}" required>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select><br><br>`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -213,3 +213,34 @@ button.export:hover{
     border-color: rgb(42,63,63);
 }
      
+#butt{
+    margin: 10px;
+    padding: auto;
+align-self: center;
+text-align: center;
+width: 90px;
+border-style: none;
+border-radius: 20px;
+background-color: rgb(42,63,63);
+transition: background-color 0.3s;
+color: white;
+
+}
+#butt       :hover{
+    margin: 10px;
+    padding: auto;
+align-self: center;
+text-align: center;
+width: 90px;
+border-style: none;
+border-radius: 20px;
+color:rgb(42,63,63) ;
+background-color: white;
+
+}
+input[type="text"]{
+    text-align: center;
+    border-radius: 20px;
+    border-style: none;
+    width: 200px;
+    height: 23px}

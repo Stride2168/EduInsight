@@ -9,14 +9,14 @@
 <body>
     <div id="sidebar">
         <ul>
-            <li><a  href="homepage.html"><img id="brain" src="images/brain.png"></a></li>
+            <li><a  href="homepage.php"><img id="brain" src="images/brain.png"></a></li>
             <li><h1 id="title">EduInsight</h1></li>
-            <li><a class="sidebar" href="homepage.html">Home</a></li>
-            <li><a class="sidebar" href="sections.html">Sections</a></li>
-            <li><a class="sidebar" href="grades.html">Grades</a></li>
-            <li><a class="sidebar" href="settings.html">Settings</a></li>
-            <li><a class="User" href="page2.html">User</a></li>
-            <li><a class="logout"  href="LOGIN.html">Logout</a></li>
+            <li><a class="sidebar" href="homepage.php">Home</a></li>
+            <li><a class="sidebar" href="sections.php">Sections</a></li>
+            <li><a class="sidebar" href="grades.php">Grades</a></li>
+            <li><a class="sidebar" href="settings.php">Settings</a></li>
+            <li><a class="User" href="page2.php">User</a></li>
+            <li><a class="logout"  href="LOGIN.php">Logout</a></li>
         </ul>
     </div>
     <div id="content">
@@ -72,3 +72,22 @@
     </script>
 </body>
 </html>
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit();
+}
+
+// Optionally, check if the user has the correct role
+if ($_SESSION['role'] !== 'admin') {
+    // Redirect to an error or access denied page if role does not match
+    header("Location: error.html");
+    exit();
+}
+?>
+
+<!-- Admin page content here -->

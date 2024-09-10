@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +10,14 @@
 <body>
     <div id="sidebar">
         <ul>
-            <li><a  href="admin.html"><img id="brain" src="images/brain.png"></a></li>
+            <li><a  href="admin.php"><img id="brain" src="images/brain.png"></a></li>
             <li><h1 id="title">EduInsight</h1></li>
-            <li><a class="sidebar" href="admin.html">Home</a></li>
-            <li><a class="sidebar" href="sections.html">Sections</a></li>
-            <li><a class="sidebar" href="grades.html">Grades</a></li>
-            <li><a class="sidebar" href="settings.html">Settings</a></li>
+            <li><a class="sidebar" href="admin.php">Home</a></li>
+            <li><a class="sidebar" href="sections_admin.php">Sections</a></li>
+            <li><a class="sidebar" href="users_admin.php">Grades</a></li>
+            <li><a class="sidebar" href="settings.php">Settings</a></li>
             <li><a class="User" href="page2.html">Admin</a></li>
-            <li><a class="logout"  href="LOGIN.html">Logout</a></li>
+            <li><a class="logout"  href="LOGIN.php">Logout</a></li>
         </ul>
     </div>
     <div id="content">
@@ -33,6 +34,9 @@
         </div>
     </div>
     <script>
+
+
+
       // Function to check if the user has already visited today
       function hasVisitedToday() {
         const lastVisit = localStorage.getItem('lastVisitDate');
@@ -69,6 +73,30 @@
         window.addEventListener('load', function () {
             document.body.classList.add('loaded');
         });
+
+        
     </script>
+    
 </body>
+
 </html>
+
+<?php
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header("Location: login.php");
+    exit();
+}
+
+// Optionally, check if the user has the correct role
+if ($_SESSION['role'] !== 'admin') {
+    // Redirect to an error or access denied page if role does not match
+    header("Location: error.html");
+    exit();
+}
+?>
+
+<!-- Admin page content here -->
